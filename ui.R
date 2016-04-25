@@ -198,7 +198,8 @@ shinyUI(fluidPage(
                           radioButtons("soziale_netzwerke_studieren", "Soziale Netzwerke fürs Studium nutzen:",
                                       c("nie" = "soziale_netzwerke_studieren_nie",
                                         "oft" = "soziale_netzwerke_studieren_oft",
-                                        "selten" = "soziale_netzwerke_studieren_selten"
+                                        "selten" = "soziale_netzwerke_studieren_selten",
+                                        "manchmal" = "soziale_netzwerke_studieren_manchmal"
                                         ))
                    ),
                    column(4,
@@ -222,7 +223,7 @@ shinyUI(fluidPage(
                           radioButtons("soziale_netzwerke", "Soziale Netzwerke nutzen:",
                                       c("manchmal" = "soziale_netzwerke_manchmal",
                                         "oft" = "soziale_netzwerke_oft",   
-                                        "selten" = "sozile_netzwerke_selten")),
+                                        "selten" = "soziale_netzwerke_selten")),
                           radioButtons("internet_surfen", "Im Internet surfen:",
                                       c("manchmal" = "internet_surfen_manchmal",
                                         "oft" = "internet_surfen_oft",   
