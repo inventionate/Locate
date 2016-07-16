@@ -95,9 +95,9 @@ shinyUI(fluidPage(
                                        "oft" = "mensa_essen_oft")),
                         radioButtons("cafete_essen", "In der Cafete essen:",
                                      c("nie" = "cafete_essen_nie",
-                                       "oft" = "cafete_essen_oft",
                                        "selten" = "cafete_essen_selten",
-                                       "manchmal" = "cafete_essen_manchmal")),
+                                       "manchmal" = "cafete_essen_manchmal"
+                                       "oft" = "cafete_essen_oft")),
                         radioButtons("computerräume_nutzen", "Computerräume nutzen:",
                                      c("nie" = "computerräume_nutzen_nie",
                                        "selten" = "computerräume_nutzen_selten",
