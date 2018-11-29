@@ -2,8 +2,8 @@
 # GDA Passive Individuen verorten
 # ############################################################################
 # devtools::install_github("Inventionate/TimeSpaceAnalysis")
-library("shiny", lib.loc="~/R/x86_64-pc-linux-gnu-library/3.3")
-library("TimeSpaceAnalysis", lib.loc="~/R/x86_64-pc-linux-gnu-library/3.3")
+library(shiny)
+library(TimeSpaceAnalysis)
 # ############################################################################
 # Geometrisches Modell laden 
 # ############################################################################
@@ -69,14 +69,23 @@ shinyServer(function(input, output) {
   
   output$mca_studienalltag_sup_ind <- renderPlot({
     
-    fviz_add_sup_ind(res_gda = mca_studienalltag, sup_ind = sup_ind(), label = input$name,
-                     group = c(5, 7, 10, 6,  6, 13), size = 6, myriad = FALSE,
-                     group_names = c("Persönliche Situation", "Gewöhnliche Studienwoche",
-                                     "Studienaktivitäten an der PH", "Studienaktivitäten außerhalb der PH",
-                                     "Studienaktivitäten Internet", "Freizeitaktivitäten")) +
+    fviz_add_sup_ind(res_gda = mca_studienalltag, 
+                     sup_ind = sup_ind(), 
+                     label = input$name,
+                     group = c(5, 7, 10, 6,  6, 13), 
+                     size = 6, 
+                     myriad = TRUE, 
+                     group_names = c(
+                       "Persönliche Situation", 
+                       "Gewöhnliche Studienwoche",
+                       "Studienaktivitäten an der PH",
+                       "Studienaktivitäten außerhalb der PH",
+                       "Studienaktivitäten Internet", 
+                       "Freizeitaktivitäten")) +
+      scale_colour_viridis_d() +
       xlab(paste0("Achse 1 (", round(mca_studienalltag$eig$`percentage of variance`[1], 1), "%)")) +
       ylab(paste0("Achse 2 (", round(mca_studienalltag$eig$`percentage of variance`[2], 1), "%)")) +
-      ggtitle("Studienalltag (WS15/16)")
+      ggtitle("Studienalltag (WS15/16)") 
   })
   
   # output$mca_studienalltag_sup_ind_tab <- renderPrint({

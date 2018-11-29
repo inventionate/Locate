@@ -1,4 +1,3 @@
-
 # This is the user-interface definition of a Shiny web application.
 # You can find out more about building applications with Shiny here:
 #
@@ -96,7 +95,7 @@ shinyUI(fluidPage(
                         radioButtons("cafete_essen", "In der Cafete essen:",
                                      c("nie" = "cafete_essen_nie",
                                        "selten" = "cafete_essen_selten",
-                                       "manchmal" = "cafete_essen_manchmal"
+                                       "manchmal" = "cafete_essen_manchmal",
                                        "oft" = "cafete_essen_oft")),
                         radioButtons("computerräume_nutzen", "Computerräume nutzen:",
                                      c("nie" = "computerräume_nutzen_nie",
