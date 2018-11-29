@@ -74,7 +74,7 @@ shinyServer(function(input, output) {
                      label = input$name,
                      group = c(5, 7, 10, 6,  6, 13), 
                      size = 6, 
-                     myriad = TRUE, 
+                     myriad = FALSE, 
                      group_names = c(
                        "Persönliche Situation", 
                        "Gewöhnliche Studienwoche",
